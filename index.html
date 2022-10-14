@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punching Game by Vue JS</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.10/dist/vue.js"></script>
+</head>
+<body>
+    <div id="vue-game">
+        
+            <!-- Punch Game init & image setup-->
+            <div id="bag" v-bind:class="{burst:ended}"></div>
+
+            <!-- Punch game health bar-->
+            <div id="bag-health">
+                <div v-bind:style="{width: health + '%'}"></div>
+            </div>
+
+            <!-- Punch game controls-->
+            <div id="game-controls">
+                <button v-on:click="punch" v-show="!ended"> Punch </button>
+                <button v-on:click="reset"> Reset </button>
+            </div>
+       
+    </div>
+<script src="app.js"></script>  
+</body>
+</html>
